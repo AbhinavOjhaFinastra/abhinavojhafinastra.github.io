@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Finastra | Stack Enterprise Bulk Update</title>
+
+	<link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Bootstrap icons-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
+	<!-- Google fonts-->
+	<link rel="preconnect" href="https://fonts.gstatic.com"/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
+		  rel="stylesheet"/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
+		  rel="stylesheet"/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
+		  rel="stylesheet"/>
+
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="/assets/css/main.css" rel="stylesheet">
+	<link href="/assets/css/styles.css" rel="stylesheet">
+	<link href="/assets/css/custom.css" rel="stylesheet">
+</head>
+<body id="page-top"><!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+	<div class="container px-5">
+		<a class="navbar-brand fw-bold" href="#page-top">
+			<img class="logo-img" src="/assets/images/finastra-logo.svg"
+				 alt="Finastra Stack Enterprise" style="height:48px;">
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			Menu
+			<i class="bi-list"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item"><a class="nav-link me-lg-3" href="#create">Create</a></li>
+				<li class="nav-item uploadResultSection"><a class="nav-link me-lg-3" href="#result">Upload Result</a></li>
+			</ul>
+<!--			<div class="ms-auto">-->
+<!--				<button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"-->
+<!--						data-bs-target="#uploadFormModal">-->
+<!--					<span class="d-flex align-items-center">-->
+<!--						<i class="bi-chat-text-fill me-2"></i>-->
+<!--						<span class="small">Create Posts</span>-->
+<!--					</span>-->
+<!--				</button>-->
+<!--				<button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"-->
+<!--						data-bs-target="#uploadFormModal">-->
+<!--					<span class="d-flex align-items-center">-->
+<!--						<i class="bi-chat-text-fill me-2"></i>-->
+<!--						<span class="small">Create Posts</span>-->
+<!--					</span>-->
+<!--				</button>-->
+<!--			</div>-->
+		</div>
+	</div>
+</nav><header class="masthead" xmlns="http://www.w3.org/1999/html">
+	<div class="container px-5">
+		<div class="row gx-5 align-items-center">
+			<div class="col-lg-6">
+				<!-- Mashead text and app badges-->
+				<div class="mb-5 mb-lg-0 text-center text-lg-start">
+					<h1 class="display-1 lh-1 mb-3 text-center">Important</h1>
+					<p class="lead fw-normal text-muted mb-5">
+						<div class="row gx-5">
+						<div class="col-md-6 mb-5">
+							<!-- Feature item-->
+							<div class="text-center">
+								<a class="me-lg-3 mb-4 mb-lg-0" target="_blank" href="https://finastra.stackenterprise.co">
+
+									<button type="button" class="btn btn-dark stack-button app-badge">
+										<img class="dark-logo stack-button" src="/assets/images/logo-stackoverflow-dark.svg" alt="..."/>
+									</button>
+								</a>
+								<h3 class="font-alt">Client Id and Key</h3>
+								<p class="text-muted mb-0">You can find the Client ID and Key by navigating to your user's API Access Key section at your
+									Finastra Stack Enterprise Account</p>
+							</div>
+						</div>
+						<div class="col-md-6 mb-5">
+							<!-- Feature item-->
+							<div class="text-center">
+								<a class="me-lg-3 mb-4 mb-lg-0" href="#">
+									<button type="button" id="sampleDownload" class="btn btn-dark stack-button app-badge">
+										<span class="d-flex align-items-center">
+											<i class="bi-download me-2"></i>
+											<span>Download Sample</span>
+										</span>
+									</button>
+								</a>
+								<h3 class="font-alt">Sample</h3>
+								<p class="text-muted mb-0">Download the sample file to prepare your upload file in the right format</p>
+							</div>
+						</div>
+					</div>
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<!-- Masthead device mockup feature-->
+				<div class="masthead-access-key-screen">
+					<div class="screen-wrapper">
+						<img class="img-fluid" src="/assets/images/stack-access-key-screen.png" alt="..."/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header><!-- App features section-->
+<section id="create">
+	<div class="container px-5">
+		<div class="row gx-5 align-items-center">
+			<div class="col-lg-6">
+				<!-- Masthead device mockup feature-->
+				<div class="masthead-access-key-screen">
+					<div class="screen-wrapper">
+						<img class="img-fluid" src="/assets/images/stack-create-posts-screen.png" alt="..."/>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<!-- Mashead text and app badges-->
+				<div class="mb-5 mb-lg-0 text-center text-lg-start">
+					<h1 class="display-1 lh-1 mb-3">Create Posts</h1>
+					<p class="lead fw-normal text-muted mb-5">Fill in your Client Id & Key, upload a CSV with Questions & Answers and create them in bulk.</p>
+					<div class="d-flex flex-column flex-lg-row align-items-center">
+						<button class="btn btn-dark app-badge" data-bs-toggle="modal"
+								data-bs-target="#uploadFormModal">
+								<span class="d-flex align-items-center">
+									<i class="bi-plus-circle me-2"></i>
+									<span>Create Posts</span>
+								</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- Basic features section-->
+<section class="bg-light uploadResultSection" id="result">
+	<div class="container px-5 container-adjust">
+
+		<h1 class="display-1 lh-1 mb-3 text-center">Result</h1>
+		<div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+
+			<div class="overlay" id="uploadProgressSpinner" style="display: none;">
+				<div class="d-flex justify-content-center">
+					<div class="spinner-grow text-primary" role="status" style="width: 4rem; height: 4rem; z-index: 20;">
+						<span class="visually-hidden">Loading...</span>
+					</div>
+				</div>
+			</div>
+
+			<div id="uploadProgressDiv" style="display: none;" class="progress">
+				<div id="uploadProgress" class="progress-bar progress-bar-striped" style="width:0%"></div>
+			</div>
+			<div class="container-fluid">
+				<div style="display: none;" id="bulkUpdateResult">
+					<!-- Nav tabs -->
+					<ul class="container-fluid nav nav-pills" role="tablist">
+						<li class="nav-item">
+							<a style="text-decoration:none" class="nav-link active" data-bs-toggle="tab" href="#createdQuesTab">Created Posts</a>
+						</li>
+						<li class="nav-item">
+							<a style="text-decoration:none" class="nav-link" data-bs-toggle="tab" href="#failedQuesTab">
+								Failed Questions <sup><span style="display: none;" id="errorBadgeQues" class="badge rounded-pill bg-danger">Error</span></sup>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a style="text-decoration:none" class="nav-link" data-bs-toggle="tab" href="#failedAnswerTab">
+								Failed Answers <sup><span style="display: none;" id="errorBadgeAns" class="badge rounded-pill bg-danger">Error</span></sup>
+							</a>
+						</li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div id="createdQuesTab" class="tab-pane active table-responsive csv-table" style="margin-top: 20px;">
+							<div class="alert alert-warning" id="createdQuesWarning">
+								<strong>Warning!</strong> No questions were created.
+							</div>
+
+							<button type="button" class="btn btn-dark stack-button html-csv-download btn-sm" id="createdQuestions">
+								<span class="d-flex align-items-center">
+									<i class="bi-download me-2"></i>
+								</span>
+							</button>
+
+							<div class="table-wrapper-scroll-y csv-table" id="createdQuesTable">
+								<table class="table table-bordered table-hover table-striped post-display-table">
+									<thead>
+										<tr>
+											<th class="sticky-top" style="width: 10%;">Title</th>
+											<th class="sticky-top" style="width: 25%;">Body</th>
+											<th class="sticky-top" style="width: 10%;">Tags</th>
+											<th class="sticky-top" style="width: 15%;">Question Link</th>
+											<th class="sticky-top" style="width: 25%;">Answer</th>
+											<th class="sticky-top" style="width: 15%;">Answer Link</th>
+										</tr>
+									</thead>
+									<tbody id="createdQues"></tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="failedQuesTab" class="tab-pane fade table-responsive" style="margin-top: 20px;">
+							<div class="alert alert-info" id="failedQuesWarning">
+								<strong>Info!</strong> No Errors.
+							</div>
+
+							<button type="button" class="btn btn-dark stack-button html-csv-download btn-sm" id="failedQuestions">
+								<span class="d-flex align-items-center">
+									<i class="bi-download me-2"></i>
+								</span>
+							</button>
+
+							<div class="table-wrapper-scroll-y csv-table" id="failedQuesTable">
+								<table class="table table-bordered table-hover table-striped post-display-table">
+									<thead>
+										<tr>
+											<th class="sticky-top" style="width: 15%;">Title</th>
+											<th class="sticky-top" style="width: 25%;">Body</th>
+											<th class="sticky-top" style="width: 10%;">Tags</th>
+											<th class="sticky-top" style="width: 25%;">Answer</th>
+											<th class="sticky-top" style="width: 25%;">Error</th>
+										</tr>
+									</thead>
+									<tbody id="failedQues"></tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="failedAnswerTab" class="tab-pane fade table-responsive csv-table" style="margin-top: 20px;">
+							<div class="alert alert-info" id="failedAnsWarning">
+								<strong>Info!</strong> No Errors.
+							</div>
+
+							<button type="button" class="btn btn-dark stack-button html-csv-download btn-sm" id="failedAnswers">
+								<span class="d-flex align-items-center">
+									<i class="bi-download me-2"></i>
+								</span>
+							</button>
+
+							<div class="table-wrapper-scroll-y csv-table" id="failedAnsTable">
+								<table class="table table-bordered table-hover table-striped post-display-table">
+									<thead>
+										<tr>
+											<th class="sticky-top" style="width: 10%;">Question Id</th>
+											<th class="sticky-top" style="width: 20%;">Question Title</th>
+											<th class="sticky-top" style="width: 35%;">Answer</th>
+											<th class="sticky-top" style="width: 35%;">Error</th>
+										</tr>
+									</thead>
+									<tbody id="failedAns"></tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="modal fade" id="uploadFormModal" tabindex="-1" aria-labelledby="uploadFormModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header bg-gradient-primary-to-secondary p-4">
+				<h5 class="modal-title font-alt text-white" id="uploadFormModalLabel">Create</h5>
+				<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body border-0 p-4">
+
+				<form id="bulk-update-form" class="needs-validation" novalidate>
+					<!-- Client Id input-->
+					<div class="form-floating mb-3">
+						<input class="form-control" id="clientId" type="text" placeholder="Enter Client Id..." required/>
+						<label for="clientId">Client Id</label>
+						<div class="invalid-feedback">A valid Client Id is required.</div>
+					</div>
+					<!-- Client Key input-->
+					<div class="form-floating mb-3">
+						<input class="form-control" id="clientKey" type="text" placeholder="Enter key..." required/>
+						<label for="clientKey">Key</label>
+						<div class="invalid-feedback">A valid Key is required.</div>
+					</div>
+					<!-- CSV File input-->
+					<div class="form-floating mb-3">
+						<input class="form-control-file" id="fileToUpload" type="file" placeholder="Upload CSV file..." required/>
+<!--						<label for="fileToUpload">CSV File</label>-->
+						<div class="invalid-feedback">A valid CSV File is required.</div>
+					</div>
+
+					<!-- Generated Token hidden -->
+					<input hidden disabled placeholder="Generated Token" type="text" id="generated-token" class="form-control">
+
+					<!-- Submit Button-->
+					<div class="d-grid">
+						<button class="btn btn-primary rounded-pill btn-lg" id="btnUploadFile" type="submit">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div><footer class="bg-black text-center footer-padding">
+	<div class="container footer-padding">
+		<div class="text-white-50 small">
+			<div class="mb-2">&copy; 2022 Finastra. All rights reserved.</div>
+			<a href="https://www.facebook.com/FinastraCareers/">Facebook</a>
+			<span class="mx-1">&middot;</span>
+			<a href="https://www.linkedin.com/company/finastra">LinkedIn</a>
+			<span class="mx-1">&middot;</span>
+			<a href="https://www.youtube.com/channel/UCXMHbdfIgA6bzw_fsPN39bg">Youtube</a>
+			<span class="mx-1">&middot;</span>
+			<a href="https://twitter.com/FinastraFS?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
+		</div>
+	</div>
+</footer><!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="/assets/js/table-fixed-header.js"></script>
+<script src="/assets/js/scripts.js"></script>
+
+<script src="/assets/js/htmlToCSV.js"></script>
+
+<script src="/assets/js/validation-scripts.js"></script>
+<script src="/assets/js/stackOverflowAuth.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/readCSV.js"></script>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- * *                               SB Forms JS                               * *-->
+<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!--<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>--></body>
+</html>
