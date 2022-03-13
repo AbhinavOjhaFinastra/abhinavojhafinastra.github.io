@@ -204,6 +204,7 @@ $(document).ready(function() {
 	        let headerRow = line_array[0];
 
 	        // 4 columns = title,body,tags,answer or 5 columns = title,body,tags,answer,error
+	        // error column not needed so validation is not required
 	        if (headerRow) {
 	            let headerLength = headerRow.length;
 
