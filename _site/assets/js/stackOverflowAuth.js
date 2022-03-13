@@ -246,6 +246,8 @@ function (constUndefined) {
                 } finally {
                     window.removeEventListener("mouseover", testAccessHandler);
                 }
+            } else {
+                opened = window.open(url, windowName, "width=660,height=480");
             }
         };
 
@@ -253,8 +255,6 @@ function (constUndefined) {
         // to cross origin policy. Had to use mouse over for the parent window because in such case opened window has the access and so the rest of code doesn't
         // get triggered as the parent window loses focus to the child window, and even after manually closing it, rest of the code is not gonna get triggered
         window.addEventListener("mouseover", testAccessHandler);
-
-        opened = window.open(url, windowName, "width=660,height=480");
     }
 
     return {

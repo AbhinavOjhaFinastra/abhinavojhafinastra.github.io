@@ -181,12 +181,15 @@ $(document).ready(function() {
                     $("div#uploadProgressSpinner").hide();
 
                     $("input#clientKey").val("").addClass("is-invalid");
+                    $("#uploadFormModal").modal('show');
                 });
 
 			} else {
 			    $("#fileToUpload").val("").addClass("is-invalid");
 
 			    $("div#uploadProgressSpinner").hide();
+
+			    $("#uploadFormModal").modal('show');
 
                 return;
 			}
@@ -199,9 +202,25 @@ $(document).ready(function() {
 	function isCSVFileValid(line_array) {
 	    if (line_array && line_array.length > 1) {
 	        let headerRow = line_array[0];
+
 	        // 4 columns = title,body,tags,answer or 5 columns = title,body,tags,answer,error
-	        if (headerRow && headerRow.length >= 4) {
-	            return true;
+	        // error column not needed so validation is not required
+	        if (headerRow) {
+	            let headerLength = headerRow.length;
+
+	            if (headerLength >= 4) {
+	                let title = headerRow[0];
+	                let body = headerRow[1];
+	                let tags = headerRow[2];
+	                let answer = headerRow[3];
+
+	                if ((title && title.toLowerCase().indexOf("title") >= 0) &&
+	                (body && body.toLowerCase().indexOf("body") >= 0) &&
+	                (tags && tags.toLowerCase().indexOf("tags") >= 0) &&
+	                (answer && answer.toLowerCase().indexOf("answer") >= 0)) {
+	                    return true;
+	                }
+	            }
 	        }
 	    }
 
