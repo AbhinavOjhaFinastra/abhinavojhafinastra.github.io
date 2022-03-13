@@ -181,12 +181,15 @@ $(document).ready(function() {
                     $("div#uploadProgressSpinner").hide();
 
                     $("input#clientKey").val("").addClass("is-invalid");
+                    $("#uploadFormModal").modal('show');
                 });
 
 			} else {
 			    $("#fileToUpload").val("").addClass("is-invalid");
 
 			    $("div#uploadProgressSpinner").hide();
+
+			    $("#uploadFormModal").modal('show');
 
                 return;
 			}
