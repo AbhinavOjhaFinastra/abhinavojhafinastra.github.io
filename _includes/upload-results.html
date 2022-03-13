@@ -1,0 +1,124 @@
+<!-- Basic features section-->
+<section class="bg-light uploadResultSection" id="result">
+	<div class="container px-5 container-adjust">
+
+		<h1 class="display-1 lh-1 mb-3 text-center">Result</h1>
+		<div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+
+			<div class="overlay" id="uploadProgressSpinner" style="display: none;">
+				<div class="d-flex justify-content-center">
+					<div class="spinner-grow text-primary" role="status" style="width: 4rem; height: 4rem; z-index: 20;">
+						<span class="visually-hidden">Loading...</span>
+					</div>
+				</div>
+			</div>
+
+			<div id="uploadProgressDiv" style="display: none;" class="progress">
+				<div id="uploadProgress" class="progress-bar progress-bar-striped" style="width:0%"></div>
+			</div>
+			<div class="container-fluid">
+				<div style="display: none;" id="bulkUpdateResult">
+					<!-- Nav tabs -->
+					<ul class="container-fluid nav nav-pills" role="tablist">
+						<li class="nav-item">
+							<a style="text-decoration:none" class="nav-link active" data-bs-toggle="tab" href="#createdQuesTab">Created Posts</a>
+						</li>
+						<li class="nav-item">
+							<a style="text-decoration:none" class="nav-link" data-bs-toggle="tab" href="#failedQuesTab">
+								Failed Questions <sup><span style="display: none;" id="errorBadgeQues" class="badge rounded-pill bg-danger">Error</span></sup>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a style="text-decoration:none" class="nav-link" data-bs-toggle="tab" href="#failedAnswerTab">
+								Failed Answers <sup><span style="display: none;" id="errorBadgeAns" class="badge rounded-pill bg-danger">Error</span></sup>
+							</a>
+						</li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div id="createdQuesTab" class="tab-pane active table-responsive csv-table" style="margin-top: 20px;">
+							<div class="alert alert-warning" id="createdQuesWarning">
+								<strong>Warning!</strong> No questions were created.
+							</div>
+
+							<button type="button" class="btn btn-dark stack-button html-csv-download btn-sm" id="createdQuestions">
+								<span class="d-flex align-items-center">
+									<i class="bi-download me-2"></i>
+								</span>
+							</button>
+
+							<div class="table-wrapper-scroll-y csv-table" id="createdQuesTable">
+								<table class="table table-bordered table-hover table-striped post-display-table">
+									<thead>
+										<tr>
+											<th class="sticky-top" style="width: 10%;">Title</th>
+											<th class="sticky-top" style="width: 25%;">Body</th>
+											<th class="sticky-top" style="width: 10%;">Tags</th>
+											<th class="sticky-top" style="width: 15%;">Question Link</th>
+											<th class="sticky-top" style="width: 25%;">Answer</th>
+											<th class="sticky-top" style="width: 15%;">Answer Link</th>
+										</tr>
+									</thead>
+									<tbody id="createdQues"></tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="failedQuesTab" class="tab-pane fade table-responsive" style="margin-top: 20px;">
+							<div class="alert alert-info" id="failedQuesWarning">
+								<strong>Info!</strong> No Errors.
+							</div>
+
+							<button type="button" class="btn btn-dark stack-button html-csv-download btn-sm" id="failedQuestions">
+								<span class="d-flex align-items-center">
+									<i class="bi-download me-2"></i>
+								</span>
+							</button>
+
+							<div class="table-wrapper-scroll-y csv-table" id="failedQuesTable">
+								<table class="table table-bordered table-hover table-striped post-display-table">
+									<thead>
+										<tr>
+											<th class="sticky-top" style="width: 15%;">Title</th>
+											<th class="sticky-top" style="width: 25%;">Body</th>
+											<th class="sticky-top" style="width: 10%;">Tags</th>
+											<th class="sticky-top" style="width: 25%;">Answer</th>
+											<th class="sticky-top" style="width: 25%;">Error</th>
+										</tr>
+									</thead>
+									<tbody id="failedQues"></tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="failedAnswerTab" class="tab-pane fade table-responsive csv-table" style="margin-top: 20px;">
+							<div class="alert alert-info" id="failedAnsWarning">
+								<strong>Info!</strong> No Errors.
+							</div>
+
+							<button type="button" class="btn btn-dark stack-button html-csv-download btn-sm" id="failedAnswers">
+								<span class="d-flex align-items-center">
+									<i class="bi-download me-2"></i>
+								</span>
+							</button>
+
+							<div class="table-wrapper-scroll-y csv-table" id="failedAnsTable">
+								<table class="table table-bordered table-hover table-striped post-display-table">
+									<thead>
+										<tr>
+											<th class="sticky-top" style="width: 10%;">Question Id</th>
+											<th class="sticky-top" style="width: 20%;">Question Title</th>
+											<th class="sticky-top" style="width: 35%;">Answer</th>
+											<th class="sticky-top" style="width: 35%;">Error</th>
+										</tr>
+									</thead>
+									<tbody id="failedAns"></tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

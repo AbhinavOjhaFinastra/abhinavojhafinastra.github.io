@@ -1,0 +1,69 @@
+.stack-button {
+    margin-bottom: 1.5rem;
+}
+
+.masthead .masthead-access-key-screen {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: relative;
+}
+
+.screen-wrapper {
+  max-width: 500px;
+  width: 100%;
+}
+
+.stick-to-end {
+    float: right!important;
+}
+
+/* Adjusting posts display table */
+.post-display-table {
+    table-layout: fixed;
+    word-break: break-word;
+}
+
+.post-display-table th {
+    background-color: #fff!important;
+    border-bottom: 2px solid currentColor;
+}
+
+
+.post-display-table tbody {
+    border-top: none!important;
+}
+
+.footer-padding {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 40%;
+    left: 0px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.uploadResultSection {
+    display: none;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #212529;
+}
+
+.csv-table {
+    position: relative;
+    height: 60vh;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
