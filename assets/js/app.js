@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+    $("#clientId").on('change', function(event) {
+        let cId = $(this).val();
+        if (isNan(cId)) {
+            $(this).val("").addClass("is-invalid");
+        } else {
+            $(this).removeClass("is-invalid");
+        }
+    });
+
     $("#uploadFormModal").on('hidden.bs.modal', function (event) {
         // Clear out any invalidation when we submit form
         $("input#clientId").removeClass("is-invalid");
@@ -7,7 +16,7 @@ $(document).ready(function() {
         $("input#fileToUpload").val("").removeClass("is-invalid");
 
         $("#bulk-update-form").removeClass("was-validated");
-    })
+    });
 
 	var csvParsedArray = [];
 	var progressWidth = 0;
