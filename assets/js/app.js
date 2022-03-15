@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     $("#clientId").on('change', function(event) {
         let cId = $(this).val();
-        if (isNan(cId)) {
+        if (isNaN(cId)) {
             $(this).val("").addClass("is-invalid");
         } else {
             $(this).removeClass("is-invalid");
