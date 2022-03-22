@@ -72,7 +72,7 @@ $(document).ready(function() {
 
 		let hostPort = location.port;
 		if (hostPort) {
-		    // This is for local testing and will we removed later
+		    // This is for local testing and can be removed later
             runCSVUpload("yIZdlAd54BPU73NmhkEWYA))", "wjD0jJU7EuKP3kGvJyhYvA((");
 		} else {
 
@@ -82,7 +82,7 @@ $(document).ready(function() {
 				clientId: $('#clientId').val(),
 				key: $('#clientKey').val(),
 				// Used for cross domain communication, it will be validated
-				channelUrl: 'https://abhinavojhafinastra.github.io/stack-bulk-update/',
+				channelUrl: 'https://abhinavojhafinastra.github.io/',
 				appDomain: 'https://abhinavojhafinastra.github.io',
 				appBase: 'stack-bulk-update',
 				// Called when all initialization is finished
